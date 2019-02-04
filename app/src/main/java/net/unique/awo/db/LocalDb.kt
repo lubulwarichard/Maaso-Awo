@@ -7,7 +7,7 @@ import net.unique.awo.db.user.UserDao
 import net.unique.awo.model.LoginCreds
 import net.unique.awo.model.Post
 
-@Database(entities = [Post::class, LoginCreds::class], version = 2, exportSchema = false)
+@Database(entities = [Post::class, LoginCreds::class], version = 1, exportSchema = false)
 abstract class LocalDb : RoomDatabase() {
 
     abstract fun postsDao(): PostsDao

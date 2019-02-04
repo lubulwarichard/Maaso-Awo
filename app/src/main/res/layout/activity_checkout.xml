@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="net.unique.awo.ui.checkout.CheckoutActivity">
+
+    <android.support.design.widget.AppBarLayout
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp">
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ScrollView
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/btn_pay_now"
+                android:scrollbars="none">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:id="@+id/linearLayout">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:background="@drawable/gradient_drawable">
+
+                    <TextView
+                            android:id="@+id/tv_main_account"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            android:text="$1,203.83"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorWhite"
+                            android:paddingTop="@dimen/margin_3dp"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:text="Main account"/>
+
+                    <TextView
+                            android:id="@+id/tv_my_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorWhite"
+                            android:paddingTop="@dimen/margin_3dp"
+                            android:textSize="10sp"
+                            android:text="+2567777932322"/>
+
+
+                </LinearLayout>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:textSize="12sp"
+                        android:padding="@dimen/margin_5dp"
+                        android:text="Driver Details"/>
+
+                <include layout="@layout/divider_line"/>
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/activity_margin"
+                        android:background="@color/colorWhite">
+
+                    <ImageView
+                            android:id="@+id/iv_driver_dp"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/bg_circle"/>
+
+                    <LinearLayout
+                            android:id="@+id/layout_driver_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/activity_margin"
+                            android:paddingRight="@dimen/activity_margin"
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/iv_driver_dp"
+                            android:paddingStart="@dimen/activity_margin"
+                            android:layout_toEndOf="@+id/iv_driver_dp">
+
+                        <TextView
+                                android:id="@+id/tv_driver_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="Mukiibi Jonathan"/>
+
+                        <TextView
+                                android:id="@+id/tv_driver_phone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+256705050938"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:id="@+id/layout_rating_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignRight="@+id/layout_driver_details"
+                            android:orientation="vertical"
+                            android:layout_alignEnd="@+id/layout_driver_details"
+                            android:layout_alignParentEnd="true">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4.4"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <include layout="@layout/divider_line"/>
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/activity_margin"
+                        android:background="@color/colorWhite">
+
+                    <ImageView
+                            android:id="@+id/iv_taxi_dp"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/bg_circle"/>
+
+                    <LinearLayout
+                            android:id="@+id/layout_car_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/activity_margin"
+                            android:paddingRight="@dimen/activity_margin"
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/iv_taxi_dp"
+                            android:paddingStart="@dimen/activity_margin"
+                            android:layout_toEndOf="@+id/iv_taxi_dp">
+
+                        <TextView
+                                android:id="@+id/tv_taxi_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="Toyota Kibina 1976 - Diesel"/>
+
+                        <TextView
+                                android:id="@+id/tv_taxi_no_plate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="UBB 234V"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignRight="@+id/layout_car_details"
+                            android:orientation="vertical"
+                            android:layout_alignEnd="@+id/layout_car_details"
+                            android:layout_alignParentEnd="true">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4.4"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <include layout="@layout/divider_line"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:textSize="12sp"
+                        android:padding="@dimen/margin_5dp"
+                        android:text="Payment"/>
+
+                <include layout="@layout/divider_line"/>
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/activity_margin"
+                        android:background="@color/colorWhite">
+
+                    <ImageView
+                            android:id="@+id/iv_money_icon"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/bg_circle"/>
+
+                    <LinearLayout
+                            android:id="@+id/layout_payment_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/activity_margin"
+                            android:paddingRight="@dimen/activity_margin"
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/iv_money_icon"
+                            android:paddingStart="@dimen/activity_margin"
+                            android:layout_toEndOf="@+id/iv_money_icon">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:text="Pay amount:"/>
+
+                            <TextView
+                                    android:id="@+id/tv_pay_amount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="20sp"
+                                    android:gravity="end"
+                                    android:text="1,000"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:text="Discount:"/>
+
+                            <TextView
+                                    android:id="@+id/tv_discount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:gravity="end"
+                                    android:text="10%"/>
+
+                        </LinearLayout>
+                        <include layout="@layout/divider_line"
+                                 android:layout_marginTop="@dimen/margin_10dp"
+                                 android:layout_height="wrap_content"
+                                 android:layout_width="match_parent"/>
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:text="Total:"/>
+
+                            <TextView
+                                    android:id="@+id/tv_total"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:textSize="20sp"
+                                    android:gravity="end"
+                                    android:text="900"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <include layout="@layout/divider_line"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_pay_now"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/gradient_drawable"
+                android:text="Pay Now"
+                android:layout_alignParentBottom="true"/>
+
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

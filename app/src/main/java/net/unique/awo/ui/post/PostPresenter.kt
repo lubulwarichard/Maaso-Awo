@@ -22,9 +22,6 @@ import javax.inject.Inject
 class PostPresenter(postView: PostView) : BasePresenter<PostView>(postView) {
 
     @Inject
-    lateinit var postApi: PostApi
-
-    @Inject
     lateinit var postsLocalRepo: PostsLocalRepo
 
     private lateinit var disposable: Disposable

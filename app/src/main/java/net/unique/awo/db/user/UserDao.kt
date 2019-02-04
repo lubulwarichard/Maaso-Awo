@@ -5,7 +5,7 @@ import android.arch.persistence.room.Insert
 import android.arch.persistence.room.OnConflictStrategy
 import android.arch.persistence.room.Query
 import net.unique.awo.model.LoginCreds
-import net.unique.awo.utils.Constants
+import net.unique.awo.helpers.Constants
 
 @Dao
 interface UserDao {

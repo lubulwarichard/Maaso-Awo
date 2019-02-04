@@ -14,8 +14,14 @@ class UserLogin : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_login)
 
+        setupToolbar()
         setupViews()
 
+    }
+
+    private fun setupToolbar() {
+        setSupportActionBar(toolbar)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
     }
 
     private fun setupViews() {
@@ -28,7 +34,7 @@ class UserLogin : AppCompatActivity() {
 
             if (phone_number.length == 9) {
 
-                val loginCreds = LoginCreds(country_code, country_name, phone_number)
+                val loginCreds = LoginCreds(country_code, country_name, "", "", phone_number)
 
                 val intent = Intent(this, VerifyPhoneSMS::class.java)
                 intent.putExtra("passed_login_creds", loginCreds)

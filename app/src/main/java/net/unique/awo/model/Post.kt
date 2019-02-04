@@ -3,7 +3,7 @@ package net.unique.awo.model
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
 import android.support.annotation.Nullable
-import net.unique.awo.utils.Constants
+import net.unique.awo.helpers.Constants
 
 /**
  * Class which provides a model for post for both retrofit and local database

@@ -12,7 +12,7 @@ class UserLocalRepo @Inject constructor(var userDao: UserDao) {
         return Observable.fromCallable { userDao.getUserCreds() }
     }
 
-    fun addUserCreds(userCreds: LoginCreds) {
+    fun updateUserCreds(userCreds: LoginCreds) {
         userDao.insertUserCreds(userCreds)
     }
 

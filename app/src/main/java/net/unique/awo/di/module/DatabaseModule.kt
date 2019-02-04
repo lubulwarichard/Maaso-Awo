@@ -17,11 +17,10 @@ class DatabaseModule {
     @Singleton
     @Provides
     internal fun provideLocalDb(context: Context): LocalDb {
-        val localDb = Room.databaseBuilder(context, LocalDb::class.java, "FeedMeDb")
+        return Room.databaseBuilder(context, LocalDb::class.java, "MaasoAwo")
             .fallbackToDestructiveMigration()
             .allowMainThreadQueries()
             .build()
-        return localDb
     }
 
     @Singleton

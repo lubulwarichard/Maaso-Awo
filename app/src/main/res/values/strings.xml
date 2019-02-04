@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">Feed Me</string>
+    <string name="app_name">MaasoAwo</string>
+    <string name="enter_phone_number_activity_name">Welcome</string>
+    <string name="verify_phone_number_activity_name">Verify</string>
     <string name="unknown_error">Unknown error</string>
+    <string name="toggle_flash">Toggle Flash</string>
+    <string name="generic_error_message">Something went wrong, please try again later…</string>
 </resources>

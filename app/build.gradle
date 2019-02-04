@@ -7,6 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'org.jetbrains.dokka-android'
 
 apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 28
@@ -16,12 +17,20 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        debug {
+            buildConfigField 'String', 'MomoApiSubscriptionKey', MOMO_API_SUBSCRIPTION_KEY
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            buildConfigField 'String', 'MomoApiSubscriptionKey', MOMO_API_SUBSCRIPTION_KEY
         }
     }
     dataBinding {
@@ -56,6 +65,11 @@ dependencies {
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
     kapt "com.google.dagger:dagger-android-processor:$dagger_version"
 
+    // Firebase
+    implementation 'com.google.firebase:firebase-auth:16.0.5'
+    implementation 'com.google.firebase:firebase-database:16.0.5'
+    implementation 'com.google.firebase:firebase-core:16.0.5'
+
     // OkHttp and Retrofit
     implementation 'com.squareup.okhttp3:okhttp:3.11.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
@@ -73,6 +87,15 @@ dependencies {
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     kapt 'com.github.bumptech.glide:compiler:4.8.0'
+
+    // Sliding up panel
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+
+    // Loading animations
+    implementation 'com.github.ybq:Android-SpinKit:1.2.0'
+
+    // QR code scanner
+    implementation 'me.dm7.barcodescanner:zxing:1.9.8'
 
     // Room DB
     implementation "android.arch.persistence.room:runtime:$arch_version"
